@@ -1,0 +1,65 @@
+
+class Fields:
+    domain_name = 'DomainName'
+    name_servers = 'NameServers'
+    whois_server = 'WhoisServer'
+    status = 'Status'
+    registrar_name = 'RegistrarName'
+    registrant_contact_city = 'RegistrantContact.City'
+    registrant_contact_country = 'RegistrantContact.Country'
+    registrant_contact_email = 'RegistrantContact.Email'
+    registrant_contact_fax = 'RegistrantContact.Fax'
+    registrant_contact_fax_extension = 'RegistrantContact.FaxExtension'
+    registrant_contact_name = 'RegistrantContact.Name'
+    registrant_contact_organization = 'RegistrantContact.Organization'
+    registrant_contact_postal_code = 'RegistrantContact.PostalCode'
+    registrant_contact_state = 'RegistrantContact.State'
+    registrant_contact_street_address = 'RegistrantContact.StreetAddress'
+    registrant_contact_telephone = 'RegistrantContact.Telephone'
+    registrant_contact_telephone_extension = 'RegistrantContact.TelephoneExtension'
+    admin_contact_city = 'AdminContact.City'
+    admin_contact_country = 'AdminContact.Country'
+    admin_contact_email = 'AdminContact.Email'
+    admin_contact_fax = 'AdminContact.Fax'
+    admin_contact_fax_extension = 'AdminContact.FaxExtension'
+    admin_contact_name = 'AdminContact.Name'
+    admin_contact_organization = 'AdminContact.Organization'
+    admin_contact_postal_code = 'AdminContact.PostalCode'
+    admin_contact_state = 'AdminContact.State'
+    admin_contact_street_address = 'AdminContact.StreetAddress'
+    admin_contact_telephone = 'AdminContact.Telephone'
+    admin_contact_telephone_extension = 'AdminContact.TelephoneExtension'
+    billing_contact_city = 'BillingContact.City'
+    billing_contact_country = 'BillingContact.Country'
+    billing_contact_email = 'BillingContact.Email'
+    billing_contact_fax = 'BillingContact.Fax'
+    billing_contact_fax_extension = 'BillingContact.FaxExtension'
+    billing_contact_name = 'BillingContact.Name'
+    billing_contact_organization = 'BillingContact.Organization'
+    billing_contact_postal_code = 'BillingContact.PostalCode'
+    billing_contact_state = 'BillingContact.State'
+    billing_contact_street_address = 'BillingContact.StreetAddress'
+    billing_contact_telephone = 'BillingContact.Telephone'
+    billing_contact_telephone_extension = 'BillingContact.TelephoneExtension'
+    tech_contact_city = 'TechContact.City'
+    tech_contact_country = 'TechContact.Country'
+    tech_contact_email = 'TechContact.Email'
+    tech_contact_fax = 'TechContact.Fax'
+    tech_contact_fax_extension = 'TechContact.FaxExtension'
+    tech_contact_name = 'TechContact.Name'
+    tech_contact_organization = 'TechContact.Organization'
+    tech_contact_postal_code = 'TechContact.PostalCode'
+    tech_contact_state = 'TechContact.State'
+    tech_contact_street_address = 'TechContact.StreetAddress'
+    tech_contact_telephone = 'TechContact.Telephone'
+    tech_contact_telephone_extension = 'TechContact.TelephoneExtension'
+
+    @staticmethod
+    def keys() -> list:
+        return list(
+            filter(lambda x: not x.startswith('_'), Fields.__dict__)
+        )
+
+    @staticmethod
+    def values() -> list:
+        return [Fields.__dict__[k] for k in Fields.keys()]
